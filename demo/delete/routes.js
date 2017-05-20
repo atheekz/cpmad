@@ -8,7 +8,6 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
 
       .state('cameraTabDefaultPage', {
     url: '/page2',
@@ -74,17 +73,6 @@ angular.module('app.routes', [])
     }
   })
 
-
-  .state('tabsController.directions', {
-    url: '/page11',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/directions.html',
-        controller: 'directionsCtrl'
-      }
-    }
-  })
-
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
@@ -97,13 +85,17 @@ angular.module('app.routes', [])
     controller: 'signUpCtrl'
   })
 
-  
+  .state('tabsController.directions', {
+    url: '/page11',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/directions.html',
+        controller: 'directionsCtrl'
+      }
+    }
+  })
 
+$urlRouterProvider.otherwise('/page1/nearByMe')
 
-$urlRouterProvider.otherwise('/login')
-
-  
 
 });
-
-
